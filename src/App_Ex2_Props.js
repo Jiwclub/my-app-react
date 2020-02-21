@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 export default class App extends Component {
     render() {
-        return (
+        return (           //การส่งค่าจาก component แม่ ไปยัง component ลูก
             <div>
-                <Entry label="UserName" type="text"/>
-                <Entry label="PassWord" type="password"/>
+                <Entry label="UserName" type="text" hint="e-mall"/>
+                <Entry label="PassWord" type="password" hint="min 8 letter"/>
             </div>
         )
     }
@@ -19,10 +19,11 @@ class Entry extends Component {
         super(props)
     }
     render() {
-        return (
+        return (            //component ลูก
             <div>
                 <span>{this.props.label}: </span>
-                <input type={this.props.type} name="" id="input" class="btn btn-primary"  />
+                <input type={this.props.type} name="" id="input" 
+                class="btn btn-primary" placeholder= {this.props.hint} />
             </div>
         )
     }
