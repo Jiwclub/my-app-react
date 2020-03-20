@@ -22,6 +22,7 @@ export default class App extends Component {
               <div class="form-group">
                 <label for="">username</label>
                 <input
+//                 onChange เป็นการดักข้อมูลที่พิมพ์เข้ามา
                 onChange={e=>{
                     this.setState({username: e.target.value})
                 }}
